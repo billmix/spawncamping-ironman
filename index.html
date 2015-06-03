@@ -1,9 +1,26 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Learning JS</title>
-	</head>
-<body>
+<script>
 
-</body>
-</html>
+var f = "fizz";
+var b = "buzz";
+var i = 0;
+
+function result(type){
+	console.log(type);
+}
+
+do{
+	i++;
+
+	if(i % 15 === 0){
+		result(f+b);
+	}else if(i % 5 === 0){
+		result(b);
+	}else if (i % 3 === 0){
+		result(f);
+	}else{
+		result(i);
+	}
+
+}while(i<100)
+
+</script>

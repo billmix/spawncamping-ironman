@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<textarea id="input"></textarea>
+	<input type="button" onclick="count();" value="submit">
+	<p id="resultLetters"></p>
+	<p id="resultWords"></p>
+	<script>
+		//letter count (not spaces)
+		//word count
+		
+		/*function count(){
+			var textarea = document.getElementById('input');
+			var result = document.getElementById('result');
+			var sentence = textarea.value;
+			var letterCount = sentence.split(" ").join("");
+			var wordCount = sentence.split(" ");
+			var slength =  letterCount.length;
+			
+			result.innerHTML = slength;
+			return slength;
+		}*/
+
+		var countInput = document.getElementById("input");
+		countInput.addEventListener("keypress", function (e) {
+
+	    	var textarea = document.getElementById('input');
+			var result = document.getElementById('result');
+			var sentence = textarea.value;
+			var letterCount = sentence.split(" ").join("");
+			var wordCount = sentence.split(" ").length;
+			var slength =  letterCount.length;
+			resultLetters.innerHTML = slength + " letters in your input.<br />";
+			resultWords.innerHTML = wordCount + " words in your input.<br />";
+
+		});
+
+	</script>
+
+</body>
+</html>
